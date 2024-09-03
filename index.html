@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigos de Patronato</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <!-- Nav Bar -->
+        <nav class="nav-bar">
+            <div class="nav-bar-image">
+                <img src="/images/patronato.png" alt="Logo" style="width: 100px; height: auto;">
+            </div>
+            <div class="nav-bar-search-div">
+                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                <input type="text" class="nav-bar__search" placeholder="Buscar posts">
+            </div>
+            <ul class="nav-bar-list">
+                <li class="nav-item">
+                    <button id="home-btn" class="nav-button">Inicio</button>
+                </li>
+                <li class="nav-item">
+                    <button id="create-post-btn" class="nav-button">Publicar</button>
+                </li>
+                <li class="nav-item">
+                    <button id="delete-post-btn" class="nav-button">Eliminar Publicación</button>
+                </li>
+                <li class="nav-item">
+                    <button id="logout-btn" class="nav-button">Salir</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Logeo -->
+        <div id="login-div" class="">
+            <form action="" class="form">
+                <h2 class="form__header">¡Bienvenido Rojiné!, ingresa tus datos para acceder</h2>
+                <div class="form__field">
+                    <label for="username" class="form__field__label">Usuario</label>
+                    <input type="text" id="login-username" name="username" class="form__text">
+                </div>
+                <div class="form__field">
+                    <label for="password" class="form__field__label">Contraseña</label>
+                    <input type="password" id="login-password" name="password" class="form__text">
+                </div>
+                <div class="form__btns">
+                    <button id="create-user-btn" class="form__button">Crear usuario</button>
+                    <button id="login-btn" class="form__button">Iniciar sesión</button>
+                    <button id="clear-local-storage-btn" class="form__button">Borrar datos</button>
+                    <button id="create-test-data-btn" class="form__button">Generar datos</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Ccreacion de usuario -->
+        <div id="create-user-div" class="">
+            <form action="" class="form">
+                <h2 class="form__header">Registrate</h2>
+                <div class="form__field">
+                    <label for="name" class="form__field__label">Nombre</label>
+                    <input type="text" id="create-user-name" name="name" class="form__text">
+                </div>
+                <div class="form__field">
+                    <label for="lastname" class="form__field__label">Apellido</label>
+                    <input type="text" id="create-user-lastname" name="lastname" class="form__text">
+                </div>
+                <div class="form__field">
+                    <label for="age" class="form__field__label">Edad</label>
+                    <input type="number" id="create-user-age" name="age" class="form__text">
+                </div>
+                <div class="form__field">
+                    <label for="tel" class="form__field__label">Teléfono</label>
+                    <input type="tel" id="create-user-tel" name="tel" class="form__text">
+                </div>
+                <div class="form__field">
+                    <label for="password" class="form__field__label">Contraseña</label>
+                    <input type="password" id="create-user-password" name="password" class="form__text">
+                </div>
+                <div class="form__btns">
+                    <button id="cancel-create-user-btn" class="form__button">Cancelar</button>
+                    <input id="confirm-create-user-btn" type="submit" value="Crear usuario" class="form__button">
+                </div>
+            </form>
+        </div>
+        
+        <!-- Sección de publicaciones -->
+        <div id="posts-div" class="">
+            <h2 class="posts-header">Publicaciones</h2>
+            <!-- Lista de publicaciones -->
+            <ul class="post__list">
+            </ul>
+        </div>
+
+        <!-- Ejemplos de posts-->
+
+        <div id="posts-div">
+            <h2 class="posts-header">Últimos Posts de los usuarios</h2>
+            <ul class="post__list">
+
+
+                <!-- Primer Post -->
+                <li class="post__list__item">
+                    <div class="post__list__item__user">
+                        <img src="https://via.placeholder.com/50" alt="Usuario">
+                        <span>Chelo Estigarribia</span>
+                    </div>
+                    <div class="post__list__item__content">
+                        <p>Que opinan del partido de hoy? para mi al DT hay que darle el "Vuela pronto" </p>
+                        <img src="/Images/diegopozo.jpeg" alt="Imagen del post" class="post__list__item__image">
+                    </div>
+                    <div class="post__list__item__date">12 de agosto de 2024</div>
+                    <button class="post__list__item__delete">Eliminar</button>
+                </li>
+        
+                <!-- Segundo Post -->
+                <li class="post__list__item">
+                    <div class="post__list__item__user">
+                        <img src="https://via.placeholder.com/50" alt="Usuario">
+                        <span>Juan rojiné</span>
+                    </div>
+                    <div class="post__list__item__content">
+                        <p>Que juegn los pibes del club! Llevando el equipo al hombro siempre</p>
+                        <img src="/Images/ramosbellati.jpg" alt="Imagen del post" class="post__list__item__image">
+                    </div>
+                    <div class="post__list__item__date">11 de agosto de 2024</div>
+                    <button class="post__list__item__delete">Eliminar</button>
+                </li>
+        
+                <!-- Tercer Post -->
+                <li class="post__list__item">
+                    <div class="post__list__item__user">
+                        <img src="https://via.placeholder.com/50" alt="Usuario">
+                        <span>Carlitos Salva</span>
+                    </div>
+                    <div class="post__list__item__content">
+                        <p>EL 2 a 0 es el resultado mas engañoso del futbol</p>
+                        <img src="/Images/homerofutbol.jpg" alt="Imagen del post" class="post__list__item__image">
+                    </div>
+                    <div class="post__list__item__date">10 de agosto de 2024</div>
+                    <button class="post__list__item__delete">Eliminar</button>
+                </li>
+            </ul>
+        </div>
+        
+        
+        <!-- Crear publicación -->
+        <div id="create-post-div">
+            <form action="" class="form">
+                <div class="form__field">
+                    <label for="content" class="form__field__label"> ¿En que estas pensando?</label>
+                    <textarea rows="10" cols="50" id="post-content" name="content" class="form__textarea"></textarea>
+                </div>
+                <div class="form__field">
+                    <label for="img" class="form__field__label">Link de imagen</label>
+                    <input type="text" id="post-img" name="img" class="form__text">
+                </div>
+                <div class="form__btns">
+                    <button id="cancel-create-post-btn" class="form__button">Cancelar</button>
+                    <input id="confirm-create-post-btn" type="submit" value="Crear publicación" class="form__button">
+                </div>
+            </form>
+        </div>
+        
+        <!-- Eliminar publicación -->
+        <div id="delete-post-div">
+            <form action="" class="form">
+                <div class="form__field">
+                    <label for="text" class="form__field__label">IDs separados por ","</label>
+                    <input type="text" id="delete-ids" name="content" class="form__text">
+                </div>
+                <div class="form__btns">
+                    <button id="cancel-delete-post-btn" class="form__button">Cancelar</button>
+                    <input id="confirm-delete-post-btn" type="submit" value="Eliminar publicaciones" class="form__button">
+                </div>
+            </form>
+        </div>
+        
+    </main>
+    
+    <footer>
+        
+    </footer>
+    
+    <!-- Script -->
+    <script src="./script.js"></script>
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="SweetAlert.js" ></script>
+
+</body>
+</html>
